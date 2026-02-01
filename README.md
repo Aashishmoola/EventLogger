@@ -3,7 +3,7 @@
 A scalable and lightweight Event Logger Service designed to handle application events asynchronously. Can be used for any application where logging data to a message broker is the priority, before analysing and further processing of data can occur once it is stored in a database
 
 # Project Structure
-
+```
 Tasking1/
 ├── docker-compose.yml
 ├── api/
@@ -17,6 +17,7 @@ Tasking1/
 │   └── src/
 │       └── index.js
 └── README.md
+```
 
 # Documentation
 Detailed documentation has been moved to the [docs/](docs/) folder:
