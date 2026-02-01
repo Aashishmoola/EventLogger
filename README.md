@@ -1,6 +1,6 @@
 # Event Logger Service
 
-A scalable and lightweight Event Logger Service designed to handle application events asynchronously. Can be used for any application where logging data to a message broker is the first priority before analysing and futher processing of data can ocurred once it is stored in a database
+A scalable and lightweight Event Logger Service designed to handle application events asynchronously. Can be used for any application where logging data to a message broker is the priority, before analysing and further processing of data can occur once it is stored in a database
 
 # Project Structure
 
@@ -30,7 +30,7 @@ Detailed documentation has been moved to the [docs/](docs/) folder:
 1.  Clone the repo.
 2.  Configure `.env`: Create a `.env` file based on the provided template (see [Setup Guide](docs/SETUP.md)).
 3.  Run with Docker in CLI: docker-compose up --build
-4.  Access API: `http://localhost:3000` or Run API through Postman (Recommened, see (docs/API_DOCUMENTATION.md))
+4.  Access API: `http://localhost:3000` or Run API through Postman (Recommended, see (docs/API_DOCUMENTATION.md))
 
 # Architecture Overview
 
@@ -38,6 +38,6 @@ The system follows a producer-consumer pattern to ensure high throughput and rel
 
 1.  **Producer (API Service)**: Accepts HTTP requests, validates them, and pushes tasks to a RabbitMQ queue.
 2.  **Message Queue (RabbitMQ)**: Buffers messages to handle traffic spikes.
-3.  **Consumer (Worker Service)**: Pulls messages from the queue and reliably writes them to the MongoDB database on the cloud ( MongoDB Altas).
+3.  **Consumer (Worker Service)**: Pulls messages from the queue and reliably writes them to the MongoDB database on the cloud ( MongoDB Atlas).
 
 For more details, see the [Technologies & Design](docs/TECHNOLOGIES.md) document.
